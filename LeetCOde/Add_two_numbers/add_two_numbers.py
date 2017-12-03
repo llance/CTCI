@@ -21,3 +21,12 @@ class Solution:
         :type l2: ListNode
         :rtype: ListNode
         """
+
+
+        while l1.next is not None:
+            l1 = l1.next
+
+        reversed_l1 = l1
+        
+
+    

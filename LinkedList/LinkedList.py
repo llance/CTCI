@@ -2,6 +2,7 @@ __author__ = 'lanceli'
 
 from LinkedList import Node
 
+
 class LinkedList(object):
     def __init__(self, head=None):
         self.head = head
@@ -15,7 +16,7 @@ class LinkedList(object):
         current = self.head
         count = 0
         while current:
-            count += 1
+            count += 1c
             current = current.get_next()
         return count
 
@@ -48,7 +49,3 @@ class LinkedList(object):
                 self.head = current.get_next()
             else:
                 previous.set_next(current.get_next())
-
-
-
-

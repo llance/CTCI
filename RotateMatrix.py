@@ -3,26 +3,25 @@ __author__ = 'lanceli'
 import unittest
 import numpy as np
 
+
 def rotate_matrix(inputArray):
     rotated_matrix = np.full((5, 5), 0)
-
 
     for i in range(0, len(inputArray)):
         for j in range(0, len(inputArray[i])):
             # print("inputArray[",i,"][",j,"]:", inputArray[i][j])
             if j == 0:
-                rotated_matrix[i][j] = inputArray[j+4][i]
+                rotated_matrix[i][j] = inputArray[j + 4][i]
             if j == 1:
-                rotated_matrix[i][j] = inputArray[j+2][i]
+                rotated_matrix[i][j] = inputArray[j + 2][i]
             if j == 2:
                 rotated_matrix[i][j] = inputArray[j][i]
             if j == 3:
-                rotated_matrix[i][j] = inputArray[j-2][i]
+                rotated_matrix[i][j] = inputArray[j - 2][i]
             if j == 4:
-                rotated_matrix[i][j] = inputArray[j-4][i]
-            print("rotated_matrix[",i,"][",j,"]:", rotated_matrix[i][j])
+                rotated_matrix[i][j] = inputArray[j - 4][i]
+            print("rotated_matrix[", i, "][", j, "]:", rotated_matrix[i][j])
     return rotated_matrix
-
 
 
 class Test(unittest.TestCase):
@@ -47,6 +46,7 @@ class Test(unittest.TestCase):
         for [test_matrix, expected] in self.data:
             actual = rotate_matrix(test_matrix)
             self.assertEqual(actual, expected)
+
 
 if __name__ == "__main__":
     unittest.main()
