@@ -36,6 +36,7 @@ class Test(unittest.TestCase):
         ('2354', '1234'),
         ('dcw4f', 'dcw5f'),
     )
+tmux
 
     def test_cp(self):
         # true check
