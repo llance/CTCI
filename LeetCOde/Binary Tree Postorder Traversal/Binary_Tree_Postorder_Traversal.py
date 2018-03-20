@@ -30,22 +30,44 @@ class Solution(object):
         :type root: TreeNode
         :rtype: List[int]
         """
-        if not root.val and root.left is None and root.right is None:
+        # print('root.val is : ', root.val)
+        
+        if not root:
+             # and root.left is None and root.right is None:
             print('no root val')
-            return 
+            return self.nodelist
             
         if root.left is not None:
-            print('left')
-            self.postorderTraversal(root.left)
+            print('root.left.val is : ', root.val)
+            self.nodelist = self.postorderTraversal(root.left)
+            
+            if root.right is not None:
+                print('root.right.val is : ', root.val)
+                self.nodelist = self.postorderTraversal(root.right)
+                self.nodelist.append(root.val)
+                print('self.nodelist is : ', self.nodelist)
+                return self.nodelist
+
+            
+            self.nodelist.append(root.val)
+            print('self.nodelist is : ', self.nodelist)
+
+            return self.nodelist
+            
         if root.right is not None:
-            print('right')
-            self.postorderTraversal(root.right)
+            print('root.right.val is : ', root.val)
+            self.nodelist = self.postorderTraversal(root.right)
+            self.nodelist.append(root.val)
+            print('self.nodelist is : ', self.nodelist)
+
+            return self.nodelist
+
 
         if root.left is None and root.right is None and root.val is not None:
             print('reached a leaf')
-            self.nodelist.append(root)
-
-
+            self.nodelist.append(root.val)
+            print('self.nodelist is : ', self.nodelist)
+            return self.nodelist
 
 
 
