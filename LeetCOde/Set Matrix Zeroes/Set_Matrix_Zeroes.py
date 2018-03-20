@@ -8,24 +8,28 @@
 # A simple improvement uses O(m + n) space, but still not the best solution.
 # Could you devise a constant space solution?
 
-
 class Solution(object):
     def setZeroes(self, matrix):
         """
         :type matrix: List[List[int]]
         :rtype: void Do not return anything, modify matrix in-place instead.
         """
-        
+        row_len = len(matrix)
+        col_len = len(matrix[0])
 
-        for i in range(0, len(matrix)):
-        	for j in range(0, len(matrix[i])):
-        		if matrix[i][j] == 0:
-        			for x in range(0, len(matrix)):
-        				if x == i:
-        					for y in range(0, len(matrix[x])):
-        						matrix[x][y] = 0
-        			for x in range(0, len(matrix)):
-      					for y in range(0, len(matrix[x])):
-      						if y == j:
-      							matrix[x][y] = 0
+        row = [False for i in range(row_len)]
+        col = [False for j in range(col_len)]
+
+
+        for i in range(0, row_len):
+            for j in range(0, col_len):
+                if matrix[i][j] == 0:
+                    row[i] = True
+                    col[j] = True
+
+        for x in range(0, row_len):
+            for y in range(0, col_len):
+                if row[x] or col[y]:
+                    matrix[x][y] = 0
+
 
