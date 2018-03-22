@@ -52,9 +52,19 @@ class Solution:
         self.next = None
 
 
-        while (root.val is not None):
-            pass
+        while (root.val):
+            parent = root
+            checkIfHasRightNode(root.left, parent, 'left')
 
-    def checkIfHasRightNode(self, root, parent):
+            root = parent.right
+            checkIfHasRightNode(root.right, parent, 'right')
 
+    def checkIfHasRightNode(self, root, parent, root_type):
+        if root_type == 'left':
+            if (parent.right):
+                root.next = parent.right
+            else:
+                root.next = None
+        if root_type == 'right':
+            root.next = None
 
