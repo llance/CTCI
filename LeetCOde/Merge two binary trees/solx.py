@@ -34,4 +34,20 @@ class Solution(object):
         :type t2: TreeNode
         :rtype: TreeNode
         """
+
+
+        if t1 is None:
+            return t2
+
+        if t2 is None:
+            return t1
         
+        t3 = TreeNode(t1.val + t2.val)
+
+        # if t1.left and t2.left:
+        t3.left = self.mergeTrees(t1.left, t2.left)
+
+        # if t1.right and t2.right:
+        t3.right = self.mergeTrees(t1.right,  t2.right)
+
+        return t3
