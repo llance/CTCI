@@ -41,10 +41,11 @@ class Solution(object):
             #     
             
             for _num in nums[index+1:]:
-                if _num > num and not found:
+                if _num > num and found is not True:
+                    found = True
                     nextGreaterElement.append(_num)
                     break
-            if not found:
+            if found is not True:
 
                 nextGreaterElement.append(-1)
 
