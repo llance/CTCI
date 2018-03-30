@@ -31,7 +31,7 @@ class Solution(object):
         self.range_max = float('+inf')
 
     def isValidBST(self, root, range_min, range_max):
-        """
+        """gs
         :type root: TreeNode
         :rtype: bool
         """
