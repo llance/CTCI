@@ -45,10 +45,10 @@ class Solution(object):
             word_in_morse = []
             for char in word:
                 word_in_morse.append(alpha_char_morse_dict[char])
-            words_in_morse.append(word_in_morse)
+            words_in_morse.append(''.join(word_in_morse))
 
         print('words_in_morse is : ', words_in_morse)
-        # unique_words_in_morse = set(words_in_morse)
+        unique_words_in_morse = set(words_in_morse)
 
         return len(unique_words_in_morse)
 
