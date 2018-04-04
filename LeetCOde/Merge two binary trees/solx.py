@@ -42,12 +42,13 @@ class Solution(object):
         if t2 is None:
             return t1
         
-        t3 = TreeNode(t1.val + t2.val)
+        t1.val = t1.val + t2.val
 
-        # if t1.left and t2.left:
-        t3.left = self.mergeTrees(t1.left, t2.left)
+        t1.left = self.mergeTrees(t1.left, t2.left)
 
-        # if t1.right and t2.right:
-        t3.right = self.mergeTrees(t1.right,  t2.right)
+        t1.right = self.mergeTrees(t1.right,  t2.right)
 
-        return t3
+        return t1
+        # if t1.left is None and t2.left is None and t1.right is None and t2.right is None:
+        #     return t3
+        # return t3

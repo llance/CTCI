@@ -12,7 +12,7 @@ class ListNode(object):
         self.next = None
 
 class Solution(object):
-    def swapPairs(self, head):
+    def swapPairs(self, head):gs
         """
         :type head: ListNode
         :rtype: ListNode
