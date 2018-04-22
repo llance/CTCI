@@ -16,4 +16,4 @@ class Solution(object):
                 self.answer.append("Buzz")
             else:
                 self.answer.append(str(n))
-        return self.answer
+        return self.answerg
