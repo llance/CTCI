@@ -18,4 +18,4 @@ class Solution:
                 hemming_distance += 1
 
                     
-        return hemming_distance
+        return hemming_distancegs
