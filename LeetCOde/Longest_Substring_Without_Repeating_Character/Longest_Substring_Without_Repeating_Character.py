@@ -17,31 +17,29 @@ class Solution:
         :type s: str
         :rtype: int
         """
-        unrepeated_chars = []
-        lengths = []
-
-        for char in s:
-            print("char is : ", char)
-            if char not in unrepeated_chars:
-                unrepeated_chars.append(char)
-                print("unrepeated_chars is : ", unrepeated_chars)
-            else:
-                print("repeated_char is : ", char)
-                lengths.append(len(unrepeated_chars))
-                print("lengths is : ", lengths)
-                del unrepeated_chars[:]
-                unrepeated_chars.append(char)
-                print("unrepeated_chars shuix is : ", unrepeated_chars)
-        lengths.append(len(unrepeated_chars))
-
-        if len(lengths) is not 0:
-            for elem in lengths:
-                print(elem)
-            return max(lengths)
-        elif len(lengths) is 0 and len(unrepeated_chars) is not 0:
-            return len(unrepeated_chars)
-        else:
+        if s == "":
             return 0
+
+        longest_substring = []
+        lenghts = []
+        for char in s:
+            # print("char is : ", char)
+            if char not in longest_substring:
+                longest_substring.append(char)
+            elif longest_substring[-1] == char:
+                lenghts.append(len(longest_substring))
+                longest_substring = [char]
+            else:
+                lenghts.append(len(longest_substring))
+                longest_substring = longest_substring[longest_substring.index(char)+1:]
+                longest_substring.append(char)
+            # print("longest_substring is : ", longest_substring)
+        if len(longest_substring) != 0:
+            lenghts.append(len(longest_substring))
+            
+        # print(lenghts)
+        
+        return max(lenghts)
 
 
 sol = Solution()
