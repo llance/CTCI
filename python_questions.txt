@@ -1,0 +1,62 @@
+What are Mutable and Immutable Data structures in Python ?
+What are tuples ?
+What is difference between tuple and list ? Where will you use tuple and where will you use list ?
+What is Dynamic Typing ?
+Justify this statement : Everything is object in Python ?
+Python is Call by Value or Call by Reference ?
+How do you create a dictionary which can preserve the order of pairs?
+Can you use mutable Data Structure as key in Dictionaries ?
+What is the use of enumerate() in Python?
+What are *args, **kwargs ?
+How instance variables are different from class variables?
+Differentiate between “*.py” file and “*.pyc” file?
+Explain difference between Map vs Reduce Vs Filter ?
+What are Lamda Functions ?
+What is List comprehension ?
+What is __init__ functions ?
+What are Generators ?
+What are Iterators ?
+Can generator be used to create Iterators ? Give example
+Can iterators be used to create generator ?
+Differentiate between Range and Xrange ?
+What is Method Resolution Order ?
+Python supports Multi-Level Inheritance or Multiple Inheritance or Both ?
+Does Python supports multi-threading ?
+What is multi-threading? What is GIL(Global interpreter lock) issue ?
+What are decorator ? How to create custom decorator ?
+How memory is managed in Python ?
+How does Python's garbage collection work?
+What are Regular Expressions ?
+Differentiate between append() and extend() methods ?
+What is Web Scraping? How do you achieve it in Python?
+Explain the use “with” statement in python?
+What are Middlewares ?
+What is Monkey patching ? Give example ?
+What's the difference between py2.x and py3.x ?
+Give examples of Python Framework ?
+
+What are the ways to write a function using call by reference?
+What are the commands that are used to copy an object in Python?
+What is the difference between deep and shallow copy?
+Write a program to find out the name of an object in python.
+How can the ternary operators be used in python?
+How the string does get converted to a number?
+What is the function of negative index?
+Write a program to check whether the object is of a class or its subclass.
+What is the function of “self”?
+Why does delegation performed in Python?
+How is “self” explicitly defined in a method?
+What is the use of join() for a string rather than list or tuple method?
+What is the process of compilation and linking in python?
+How does global value mutation used for thread-safety?
+Write a program to read and write the binary data using python?
+What is the process to run sub-process with pipes that connect both input and output?
+What are the different ways to generate random numbers?
+Write a program to show the singleton pattern used in python.
+On top of all this, a most important question: They might give you a code snippet and ask you to write the output.
+
+I would probably ask some questions about basic python behavior/concepts. Things like how do you create a class (yes there are so called python programmers who ignore how to create a class), what is a tuple, give some sample of immutable objets, how do you overload operators, variable life cycle (garbage collector), and such.
+
+These are really very basic questions and a so called python programmer with one year of experience ignoring that should probably not be hired. At least he is not very curious and that is not good for any kind of programmer.
+
+Then I would ask about some more advanced/intermediate subjects. Things that a decent programmer should have picked after a year, but slightly less mandatory: list comprehension, generators, iterators, variadic function calls (kwargs), meta classes or such.
